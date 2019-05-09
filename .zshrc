@@ -17,5 +17,5 @@ DEFAULT_USER=gdr
 
 antigen apply
 
-source ~/.config/zsh/zsh_aliases
+source ~/.config/zsh/aliases.zsh
 
