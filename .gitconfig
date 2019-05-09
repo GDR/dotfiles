@@ -1,6 +1,9 @@
 [user]
   name = Damir Garifullin
   email = gosugdr@gmail.com
+  signkey = EF78B6B67C4A5432
+[commit]
+  gpgsign = true
 [includeIf "gitdir:~/Git/serokell/"]
   path = ~/.config/git/serokell.gitconfig
 
