@@ -6,7 +6,7 @@ local gears = require("gears")
 -- Standard awesome library
 require("awful.autofocus")
 
-beautiful.init(gears.filesystem.get_configuration_dir() .. "/theme/gtk/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "/theme/custom/theme.lua")
 
 require("./notifications")
 require("./layouts")
