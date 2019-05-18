@@ -59,7 +59,7 @@ awful.rules.rules = {
       class = "Alacritty",
     },
     properties = {
-      tag = "1",
+      tag = "Term",
       opacity = "0.8",
     },
   },
@@ -71,7 +71,7 @@ awful.rules.rules = {
       }
     },
     properties = {
-      tag = "2",
+      tag = "Web",
     },
   },
   {
@@ -82,7 +82,7 @@ awful.rules.rules = {
       },
     },
     properties = {
-      tag = "3",
+      tag = "Dev",
     },
   },
 }
