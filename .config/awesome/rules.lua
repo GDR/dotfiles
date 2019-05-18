@@ -64,7 +64,7 @@ awful.rules.rules = {
     },
   },
   {
-    rule = {
+    rule_any = {
       class = {
         "google-chrome",
         "Google-chrome"
@@ -72,6 +72,17 @@ awful.rules.rules = {
     },
     properties = {
       tag = "2",
+    },
+  },
+  {
+    rule_any = {
+      class = {
+        "jetbrains-webstorm",
+        "code-oss"
+      },
+    },
+    properties = {
+      tag = "3",
     },
   },
 }
