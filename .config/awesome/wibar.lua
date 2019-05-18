@@ -4,8 +4,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local constants = require("./constants")
 
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-
 mytextclock = wibox.widget.textclock()
 
 -- Create a wibox for each screen and add it
