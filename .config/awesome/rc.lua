@@ -17,4 +17,6 @@ require("./menu")
 require("./global_keys")
 require("./wibar")
 
+require("./autostart")
+
 local constants = require("./constants")
