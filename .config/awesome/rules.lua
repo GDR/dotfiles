@@ -63,6 +63,17 @@ awful.rules.rules = {
       opacity = "0.8",
     },
   },
+  {
+    rule = {
+      class = {
+        "google-chrome",
+        "Google-chrome"
+      }
+    },
+    properties = {
+      tag = "2",
+    },
+  },
 }
 -- }}}
 
