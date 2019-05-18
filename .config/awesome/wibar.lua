@@ -4,6 +4,8 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local constants = require("./constants")
 
+local tags = require("tags")
+
 mytextclock = wibox.widget.textclock()
 
 -- Create a wibox for each screen and add it
@@ -68,7 +70,12 @@ awful.screen.connect_for_each_screen(function(s)
   set_wallpaper(s)
 
   -- Each screen has its own tag table.
-  awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+
+  for tag_key, tag_value in pairs(tags) do
+    awful.tag.add(tag_key, tag_value)
+  end
+
+  awful.tag({ "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
   -- Create a promptbox for each screen
   s.mypromptbox = awful.widget.prompt()
