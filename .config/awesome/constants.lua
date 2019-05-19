@@ -1,3 +1,5 @@
+
+local gears = require("gears")
 local constants = {}
 
 constants.modkey = "Mod4"
@@ -9,7 +11,7 @@ constants.editor_cmd = constants.terminal .. " -e " .. constants.editor
 constants.autostart = {
   "nm-applet",
   "setxkbmap us,ru -option \"grp:alt_space_toggle\"",
-  "compton --config ~/.config/compton.conf",
+  "compton --config " .. gears.filesystem.get_xdg_config_home() .. "compton.conf",
 }
 
 return constants
