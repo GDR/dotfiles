@@ -7,6 +7,7 @@ This is my personal set of dotfiles, that I use on my Arch Linux laptop.
     * [Oh-my-zsh] &mdash; set of awesome zsh utils
 * [Awesome WM] &mdash; tile manger
 * [Alacritty] &mdash; awesome lightweight terminal emulator
+* [Compton] &mdash; lightweight compositor for Xorg
 ### How to use
 
 At first you need to install yadm from AUR:
@@ -23,6 +24,7 @@ $ yadm clone git@github.com:GDR/dotfiles.git
 [Antigen]: <https://github.com/zsh-users/antigen>
 [Awesome WM]: <https://github.com/awesomeWM/awesome>
 [Alacritty]: <https://github.com/jwilm/alacritty>
+[Compton]: <https://github.com/chjj/compton>
 ### License
 ```
 The MIT License (MIT)
