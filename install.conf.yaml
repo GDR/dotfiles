@@ -1,0 +1,23 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+  
+- shell:
+  -
+    command: ./scripts/init.sh
+    description: Running initial script
+    stdin: true
+    stdout: true
+  - 
+    command: ./scripts/install-apps.sh
+    description: Installing apps
+    stdout: true
+
+- clean: ['~']
+
+- link:
+    ~/.zlogin: zsh/.zlogin
+    ~/.zshrc: zsh/.zshrc
+    ~/.config/zsh: zsh/config
+    ~/.config/awesome: awesome
