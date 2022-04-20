@@ -21,3 +21,4 @@
     ~/.zshrc: zsh/.zshrc
     ~/.config/zsh: zsh/config
     ~/.config/awesome: awesome
+    ~/.config/alacritty: alacritty
