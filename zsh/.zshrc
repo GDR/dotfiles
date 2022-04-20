@@ -15,3 +15,5 @@ antigen theme agnoster
 DEFAULT_USER=gdr
 
 antigen apply
+
+source ~/.config/zsh/aliases.zsh
