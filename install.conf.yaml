@@ -5,13 +5,11 @@
   
 - shell:
   -
-    command: ./scripts/init.sh
-    description: Running initial script
-    stdin: true
-    stdout: true
+    command: ansible-galaxy install -r ./ansible/requirements.yml
+    description: Install ansible dependencies
   - 
-    command: ./scripts/install-apps.sh
-    description: Installing apps
+    command: ansible-playbook -i ./ansible/targets/local --ask-become-pass ./ansible/site.yml
+    description: Run ansible playbook
     stdout: true
 
 - clean: ['~']

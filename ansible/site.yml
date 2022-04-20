@@ -1,0 +1,30 @@
+---
+- name: Provision freshly installed Arch
+  hosts: all
+  roles:
+    - role: jahrik.yay
+      aur_packages: 
+        - acpi
+        - docker
+        - docker-compose
+        - telegram-desktop
+        - rofi
+        - keepassxc
+        - antigen
+        - oh-my-zsh-git
+        - acpi
+        - ttf-apple-emoji
+        - node
+  tasks:
+    - name: Add pacman colors
+      become: true
+      ansible.builtin.lineinfile:
+        path: /etc/pacman.conf
+        search_string: '#Color'
+        line: 'Color'
+    - name: Add user to docker group
+      become: true
+      ansible.builtin.user:
+        name: gdr
+        groups: docker
+        append: yes
