@@ -14,7 +14,11 @@
         - oh-my-zsh-git
         - acpi
         - ttf-apple-emoji
-        - node
+        - nodejs
+        - xclip
+        - htop
+        - vagrant
+        - google-chrome
   tasks:
     - name: Add pacman colors
       become: true
