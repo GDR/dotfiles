@@ -5,6 +5,7 @@ local awful = require("awful")
 -- Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.useless_gap = 7
 
 -- This is used later as the default terminal and editor to run.
 Terminal = "kitty"

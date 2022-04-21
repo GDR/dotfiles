@@ -20,3 +20,4 @@
     ~/.config/zsh: zsh/config
     ~/.config/awesome: awesome
     ~/.config/alacritty: alacritty
+    ~/.config/picom: picom
