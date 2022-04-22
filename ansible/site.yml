@@ -19,7 +19,9 @@
         - htop
         - vagrant
         - google-chrome
-        - picom
+        - picom-jonaburg-git 
+        - xorg-xbacklight
+        - gruvbox-material-gtk-theme-git 
   tasks:
     - name: Add pacman colors
       become: true
