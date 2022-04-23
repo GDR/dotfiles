@@ -77,6 +77,42 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
+    awful.key({}, "XF86MonBrightnessUp",
+              function()
+                awful.spawn("xbacklight -inc 15")
+              end, { description = "Increase brightness", group = "Fn keys" }
+    ),
+    awful.key({}, "XF86MonBrightnessDown",
+              function()
+                awful.spawn("xbacklight -dec 15")
+              end, { description = "Decrease brightness", group = "Fn keys" }
+    ),
+    awful.key({}, "XF86AudioRaiseVolume",
+              function()
+                awful.spawn("amixer set 'Master' 5%+")
+              end, { description = "Increase volume", group = "Fn keys" }
+    ),
+    awful.key({}, "XF86AudioLowerVolume",
+              function()
+                awful.spawn("amixer set 'Master' 5%-")
+              end, { description = "Decrease volume", group = "Fn keys" }
+    ),
+    awful.key({}, "XF86AudioMute",
+              function()
+                awful.spawn("amixer set 'Master' toggle")
+              end, { description = "Toggle audio", group = "Fn keys" }
+    ),
+    awful.key({}, "XF86AudioMute",
+              function()
+                awful.spawn("amixer set 'Master' toggle")
+              end, { description = "Toggle audio", group = "Fn keys" }
+    ),
+    awful.key({}, "XF86AudioMicMute",
+              function()
+                awful.spawn("amixer set 'Capture' toggle")
+              end, { description = "Toggle audio", group = "Fn keys" }
+    ),
+
     awful.key({ modkey, "Control" }, "n",
               function ()
                   local c = awful.client.restore()
