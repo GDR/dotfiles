@@ -6,3 +6,18 @@
     owner: root
     mode: 644
     force: no
+- name: Ensure user systemd fodler exists
+  file:
+    path: ~/.config/systemd/user
+    recurse: yes
+    state: directory
+- name: Create ssh-agent service
+  ansible.builtin.copy:
+    src: ssh-agent.service
+    dest: ~/.config/systemd/user/ssh-agent.service
+- name: Enable and start ssh-agent service
+  ansible.builtin.systemd:
+    name: ssh-agent
+    scope: user
+    enabled: true
+    state: started
