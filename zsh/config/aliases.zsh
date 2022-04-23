@@ -30,3 +30,5 @@ function extract {
   fi
 }
 alias extr='extract '
+
+alias clip='xclip -sel clip '
