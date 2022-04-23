@@ -1,0 +1,8 @@
+- name: Move keyboard layout settings to xorg
+  become: true
+  ansible.builtin.copy:
+    src: 00-keyboard.conf
+    dest: /etc/X11/xorg.conf.d/00-keyboard.conf
+    owner: root
+    mode: 644
+    force: no

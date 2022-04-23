@@ -22,6 +22,7 @@
         - picom-jonaburg-git 
         - xorg-xbacklight
         - gruvbox-material-gtk-theme-git 
+    - role: common
   tasks:
     - name: Add pacman colors
       become: true
