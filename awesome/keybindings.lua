@@ -1,5 +1,6 @@
 local awful = require("awful")
 local gears = require("gears")
+local naughty = require("naughty")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 require("./constants")
@@ -113,6 +114,23 @@ globalkeys = gears.table.join(
               end, { description = "Toggle audio", group = "Fn keys" }
     ),
 
+
+    awful.key({ modkey }, "F12", function() 
+        awful.spawn.with_line_callback("bash -c '[[ -z $(sudo wg | grep 'peer1') ]] && echo 'down' || echo 'up''", {
+            stdout = function (out)
+                if out == 'up' then
+                    awful.spawn("bash -c 'sudo wg-quick down ~/peer1/peer1.conf'")
+                    naughty.notify({ text = tostring("Wg is down") })
+                else
+                    awful.spawn("bash -c 'sudo wg-quick up ~/peer1/peer1.conf'")
+                    naughty.notify({ text = tostring("Wg is up") })
+                end
+            end,
+            stderr = function (out)
+                naughty.notify({ text = tostring(out) })
+            end
+        })
+    end),
     awful.key({ modkey, "Control" }, "n",
               function ()
                   local c = awful.client.restore()
