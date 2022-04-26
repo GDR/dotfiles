@@ -59,6 +59,9 @@ local function set_wallpaper(s)
     end
 end
 
+-- Keyboard map indicator and switcher
+mykeyboardlayout = awful.widget.keyboardlayout()
+
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
@@ -117,6 +120,3 @@ awful.screen.connect_for_each_screen(function(s)
     }
 end)
 -- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
