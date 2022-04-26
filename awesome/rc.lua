@@ -16,3 +16,5 @@ require("./mousebindings")
 require("./keybindings")
 require("./rules")
 require("./signals")
+
+require("./autostart")
